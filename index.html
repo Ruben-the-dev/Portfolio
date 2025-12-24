@@ -5,10 +5,10 @@
   <meta http-equiv="X-UA-compatible"content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RubenTheDev — Portfolio</title>
-  <link rel="stylesheet" 
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
-      crossorigin="anonymous" 
-      referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
    <!-- le lien du fichier CSS -->
   <link rel="stylesheet" href="style.css" />
@@ -44,17 +44,17 @@
       Salut, moi c’est <span class="highlight">Ruben Mwanza</span>
       <span class="wave">👋🏽</span> 
     </h1>
-    <p class="paragraphe">
-      Développeur <strong>Full-Stack</strong> passionné par la <strong>technologie</strong> et le 
-      <strong>business numérique</strong>.  
-      Je conçois des sites et applications modernes, performants et élégants pour donner vie à vos idées.
-    </p>
-
+    
+      <p class="paragraphe">
+        Ingénieur <strong>Backend & DevOps</strong> spécialisé dans les systèmes 
+        <strong>transactionnels sécurisés</strong>. Je bâtis des infrastructures 
+        <strong>scalables</strong> pour les secteurs de la finance et des télécoms.
+      </p>
       <div class="photo-profil">
     <picture>
-        <source srcset="1741261068424 - Copie (2) (1).webp" type="image/webp">
+        <source srcset="Galerie/photo de profil.webp" type="image/webp">
         
-        <img src="Galerie/Gemini_Generated_Image_mu70a8mu70a8mu70.png" 
+        <img src="Galerie/photo de profil.png" 
              alt="Photo de Ruben Mwanza"
              loading="lazy" />
     </picture>
@@ -69,32 +69,77 @@
 </section>
 
   <!-- À PROPOS -->
-  <section id="apropos" class="about reveal">
-    <div class="text">
-      <h2>À-propos de <span>Moi!</span></h2>
-      <p>
-        Je suis développeur full-stack Freelance spécialisé en JavaScript, React et Node.js Mon objectif et de créer des produits utiles, esthetiques et evolutifs. Ouvert aux collaborations, projets innovants et opportunités tech.
-      </p>
-      <div class="skills">
-        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
-        <span>Node.js</span><span>SQL</span><span>Python</span><span>Flutter</span><span>Git</span><span>Figma</span><span>Arduino/capteurs</span>
-      </div>
-    </div>
+  <section id="apropos" class="about-modern reveal">
+    <div class="container-flex">
+        <div class="text-content">
+            <h2 class="title-grad">Expertise<span>Technique</span></h2>
+            <p>
+             <strong>Ingénieur Backend & DevOps</strong>, je bâtis des architectures robustes et des infrastructures Cloud automatisées. 
+             Spécialisé dans la <strong>haute disponibilité</strong>, je transforme des besoins complexes en solutions scalables et sécurisées.
+            </p>
+            <br>
+            <p>
+             Mon expertise combine la maîtrise du <strong>code transactionnel</strong> et la rigueur du <strong>DevOps</strong> 
+             pour garantir la continuité de vos services critiques, particulièrement dans les secteurs de la <strong>Fintech</strong> et des <strong>Télécoms</strong>.
+            </p>
+            <br>
 
-    <div class="about-img">
-      <picture>
-        <source srcset="Galerie/WhatsApp Image 2025-10-22 at 12.41.07 (2).webp" type="image/webp">
-        
-        <img src="Galerie/WhatsApp Image 2025-10-22 at 12.41.07.jpeg" 
-             alt="Ruben entrain de coder"
-             loading="lazy" />
-    </picture>
+            <div class="expertise-grid">
+                <div class="skill-card">
+                    <div class="card-header">
+                        <i class="fas fa-server"></i>
+                        <h4>Backend & Architecture</h4>
+                    </div>
+                    <div class="tags">
+                        <span><i class="devicon-python-plain"></i> Python</span>
+                        <span><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
+                        <span><i class="devicon-java-plain"></i> Java (Spring Boot)</span>
+                        <span><i class="devicon-php-plain"></i> PHP (Laravel)</span>
+                        <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL (ACID)</span>
+                        <span><i class="fa-solid fa-code-branch"></i> API RESTful</span>
+                        <span><i class="devicon-redis-plain colored"></i> Redis (Caching)</span>
+                    </div>
+                </div>
+
+                <div class="skill-card highlight">
+                    <div class="card-header">
+                        <i class="fas fa-cloud"></i>
+                        <h4>Cloud & DevOps</h4>
+                    </div>
+                    <div class="tags">
+                        <span><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS Cloud</span>
+                        <span><i class="devicon-docker-plain colored"></i> Conteneurisation (Docker)</span>
+                        <span><i class="devicon-kubernetes-plain colored"></i> Kubernetes</span>
+                        <span><i class="devicon-terraform-plain colored"></i> Terraform</span>
+                        <span><i class="devicon-kubernetes-plain"></i> Orchestration (K8s)</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-gears"></i>
+                        <h4>CI/CD & Ops</h4>
+                    </div>
+                    <div class="tags">
+                        <span><i class="devicon-githubactions-plain colored"></i> GitHub Actions</span>
+                        <span><i class="devicon-linux-plain"></i> Linux</span>
+                        <span><i class="devicon-git-plain colored"></i> GitOps</span>
+                        <span><i class="fa-solid fa-chart-line"></i> Prometheus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-box-modern">
+            <div class="tech-badge">Ingénieur Backend & DevOps</div>
+            <img src="Galerie/setup.jpeg" alt="Ruben Tech Setup">
+        </div>
     </div>
-  </section>
+</section>
 
   <!-- EXPÉRIENCE -->
   <section id="experience" class="reveal">
-    <h2 class="text">Mes <span>Expérience</span></h2>
+    <h2 class="title-grad">Mes <span>Expérience</span></h2>
     <div class="timeline">
       <div class="exp">
         <h3>Stage</h3>
@@ -102,87 +147,110 @@
         <span>2025 - 2mois</span>
      </div>
       <div class="exp">
-        <h3>Freelance — Développeur Web/Mobile</h3>
-        <p>Création de sites vitrines et dashboards pour PME et startups.</p>
+        <h3>Freelance — Ingénieur Backend & Solutions Cloud</h3>
+        <p>Développement d'architectures robustes pour PME. Mise en place de bases de données relationnelles optimisées et sécurisation des accès API pour des tableaux de bord critiques.</p>
         <span>2024 - Présent</span>
       </div>
     </div>
   </section>
 
-  <!-- PROJETS -->
-  <section id="projets" class="reveal">
-    <h2 class="text">Mes <span>Projets</span></h2>
-    <div class="projects">
-      <div class="card">
-        <picture>
-        <source srcset="Galerie/WhatsApp Image 2025-10-22 at 12.41.08 (5).webp" type="image/webp">
-        
-          <img src="Galerie/WhatsApp Image 2025-10-22 at 12.41.08.jpeg" 
-             alt="1.Projet prototypage"
-             loading="lazy" />
-       </picture>
-        <h3>1.Projet prototypage Arduino </h3>
-        <p>Nous avons conçu un système de contrôle de la qualité de l’eau contenue dans un récipient, en utilisant une carte Arduino Uno associée à des capteurs à ultrasons et d'autres composants électroniques. Ce dispositif permet de surveiller certains paramètres en temps réel afin d'assurer que l'eau reste conforme aux normes de qualité définies.</p>
-      </div>
-
-      <div class="card">
-        <picture>
-        <source srcset="Galerie/WhatsApp Image 2025-10-22 at 12.41.11.webp" type="image/webp">
-        
-        <img src="Galerie/WhatsApp Image 2025-10-22 at 12.41.11.jpeg" 
-             alt="2.Projet prototypage"
-             loading="lazy" />
-       </picture>
-        <h3>2.Projet de prototypage Arduino </h3>
-        <p>Nous avons développé un système permettant de mesurer la vitesse de rotation d’un ventilateur, en déterminant le nombre de tours effectués par seconde. Ce projet repose sur l’utilisation d’une carte Arduino Uno couplée à un capteur infrarouge pour détecter chaque rotation avec précision.</p>
-      </div>
-
-      <div class="card">
-        <picture>
-        <source srcset="Galerie/WhatsApp Image 2025-10-03 at 11.22.34 (3).webp" type="image/webp">
-        
-        <img src="Galerie/WhatsApp Image 2025-10-03 at 11.22.34.jpeg" 
-             alt="Projet client/Freelance"
-             loading="lazy" />
-       </picture>
-        <h3>Projet client/Freelance </h3>
-        <p>Speed Clean:J’ai développé un site responsive, optimisé SEO, avec une interface claire et moderne. Il comprend une présentation des services, une galerie, une section “À propos” et un formulaire de contact. Ce projet m’a permis de mettre en œuvre mes compétences en développement web et UX/UI.</p>
-      </div>
-      <div class="card">
-      <picture>
-        <source srcset="Galerie/Care.webp" type="image/webp">
-        
-        <img src="Galerie/Care.png" 
-             alt="Projet client/Freelance"
-             loading="lazy" />
-      </picture>
-         <h3>Projet client/Freelance </h3>
-         <p>Mótuka: Plateforme de vente de véhicules d'occasion livrée (Web & Mobile).
-         J'ai assuré l'intégralité du développement full-stack, en mettant l'accent sur l'UX/UI Design responsif (vitrine parfaite sur téléphone, tablette et desktop) et l'intégration d'un moteur de recherche performant pour le stock.</p>
-         </div>
-         <div class="card">
-      <picture>
-        <source srcset="Galerie/maquette.webp" type="image/webp">
-        
-        <img src="Galerie/maquette.png" 
-             alt="Projet client/Freelance"
-             loading="lazy" />
-      </picture>
-        <h3>Projet Personnel/Freelance </h3>
-        <p>Lea– Application de FemTech livrée (iOS/Android/Web).
-          J'ai géré l'intégralité du projet en freelance, de l'UX/UI Design (responsif) au développement multiplateforme avec Flutter et au déploiement d'un backend sécurisé Firebase.
-          Résultat : Une solution complète de suivi de cycle et d'hygiène, démontrant une maîtrise des technologies Full-Stack et du développement rapide.</p>
-      </div>
-    </div>
-    </div>
-  </section>
-
+ 
+      <!-- PROJETS -->
   
-  </section>
+  <section id="projets" class="reveal">
+  <h2 class="title-grad">Mes <span>Projets</span></h2>
+  
+  <div class="projects">
+    
+    <div class="card">
+      <div class="card-image-container">
+        <picture>
+          <source srcset="Galerie/kin_money_screenshot.webp" type="image/webp">
+          <img src="Galerie/kin_money_screenshot.png" alt="Kin-Money Mockup">
+        </picture>
+        <div class="status-badge">Live</div>
+      </div>
+      <div class="card-body">
+        <h3>Kin-Money — Simulation Bancaire</h3>
+        <p>Une solution backend robuste simulant un <strong>système bancaire réel</strong> : gestion de comptes, virements sécurisés et historique des transactions avec une architecture <strong>FastAPI</strong>.</p>
+        <div class="project-actions">
+          <a href="https://kin-money.onrender.com" target="_blank" class="btn-view-site"><i class="fas fa-external-link-alt"></i> Voir</a>
+          <a href="https://github.com/Ruben-the-dev/kin-money" target="_blank" class="btn-view-code"><i class="fab fa-github"></i> Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image-container">
+        <picture>
+          <source srcset="Galerie/projet2.webp" type="image/webp">
+          <img src="Galerie/projet2.jpeg" alt="Projet Arduino">
+        </picture>
+      </div>
+      <div class="card-body">
+        <h3>Prototypage Arduino</h3>
+        <p>Mesure de vitesse de rotation via capteur infrarouge et carte Arduino Uno. Détection précise des tours par seconde.</p>
+        <div class="project-actions">
+          <span class="btn-view-code" style="opacity: 0.6; cursor: not-allowed;">Hardware Project</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image-container">
+        <picture>
+          <source srcset="Galerie/maquettespeedclean.webp" type="image/webp">
+          <img src="Galerie/maquettespeedclean.jpeg" alt="Speed Clean">
+        </picture>
+      </div>
+      <div class="card-body">
+        <h3>Speed Clean</h3>
+        <p>Site vitrine responsive et optimisé SEO. Interface moderne avec galerie de services et formulaire de contact dynamique.</p>
+        <div class="project-actions">
+          <a href="#" target="_blank" class="btn-view-site"><i class="fas fa-external-link-alt"></i> Voir</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image-container">
+        <picture>
+          <source srcset="Galerie/maquettecare.webp" type="image/webp">
+          <img src="Galerie/Maquettecare .png" alt="Mótuka">
+        </picture>
+      </div>
+      <div class="card-body">
+        <h3>Mótuka — Vente Auto</h3>
+        <p>Plateforme Full-Stack de vente de véhicules d'occasion avec moteur de recherche fluide et interface utilisateur intuitive.</p>
+        <div class="project-actions">
+          <a href="#" target="_blank" class="btn-view-site"><i class="fas fa-external-link-alt"></i> Voir</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image-container">
+        <picture>
+          <source srcset="Galerie/maquettelea.webp" type="image/webp">
+          <img src="Galerie/maquettelea.png" alt="Lea Application">
+        </picture>
+      </div>
+      <div class="card-body">
+        <h3>Lea — FemTech App</h3>
+        <p>Application multiplateforme (Flutter & Firebase) de suivi de cycle. Solution complète livrée sur iOS et Android.</p>
+        <div class="project-actions">
+          <a href="#" class="btn-view-site">App Store</a>
+          <a href="#" class="btn-view-code">Case Study</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- CONTACT -->
   <section id="contact" class="reveal">
-    <h2 class="text">Contactez <span>Moi!</span></h2>
+    <h2 class="title-grad">Contactez <span>Moi!</span></h2>
     <form action="https://formspree.io/f/xovkodba"
        method="POST">
         <input type="text" name="name" placeholder="Votre nom complet" required />

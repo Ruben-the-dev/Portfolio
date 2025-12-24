@@ -322,14 +322,138 @@ nav a:hover {
   transform: rotate(-45deg) translateY(-8px);
 }
 
-/* ---- À PROPOS ---- */
-.text span { color: var(--accent);}
-.about { display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap; padding: 100px 10%; background-color:#050c1e;}
-.about .text { flex: 1; min-width: 280px; text-align: center; }
-.about .about-img { flex: 1; display: flex; justify-content: center;}
-.about .about-img img { width: 400px; border-radius: var(--radius); box-shadow: 0 6px 20px rgba(0,0,0,0.3);}
-.skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;}
-.skills span { background: var(--card); padding: 6px 12px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05);}
+/* --- SECTION A PROPOS ELITE --- */
+.about-modern {
+    padding: 100px 8%;
+    background-color: var(--bg-sc);
+}
+
+.container-flex {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.title-grad {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+}
+
+.title-grad span {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.description {
+    max-width: 650px;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: var(--muted);
+}
+
+/* Cartes de Compétences */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: #111827; /* Bleu nuit très sombre */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.card-header i {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.card-header h4 {
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+/* Tags de technos */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags span {
+    font-family: 'Fira Code', monospace; /* Police style console */
+    font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #cbd5e1;
+}
+
+.tags span i {
+    font-size: 1rem;
+}
+
+/* Bloc Image avec Badge */
+.image-box-modern {
+    flex: 0 0 400px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.tech-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--accent);
+    color: #000;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 0.7rem;
+    border-radius: 50px;
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+.image-box-modern img {
+    width: 100%;
+    filter: brightness(0.8) contrast(1.1);
+    transition: 0.5s;
+}
+
+.image-box-modern:hover img {
+    filter: brightness(1);
+    transform: scale(1.05);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .container-flex { flex-direction: column-reverse; text-align: center; }
+    .image-box-modern { width: 100%; max-width: 350px; }
+    .tags, .card-header { justify-content: center; }
+    .description { margin-left: auto; margin-right: auto; }
+}
 /* ---- EXPÉRIENCE ---- */
 
 #experience { padding: 100px 10%; text-align: center; }
@@ -338,18 +462,127 @@ nav a:hover {
 .exp span { color: var(--muted); font-size: 0.9em; }
 
 /* ---- PROJETS ---- */
-#projets { padding: 100px 10%; background: #050c1e; text-align: center;}
-.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;}
-.card { background: var(--card); padding: 0; border-radius: var(--radius); overflow: hidden; transition: var(--transition);}
-.card img { width: 100%; height: 160px; object-fit: cover;}
-.card:hover { 
-    transform: translateY(-4px); 
-    /* Amélioration de l'effet de profondeur et de brillance: */
-    box-shadow: 0 10px 30px rgba(8, 230, 246, 0.15); 
-    border: 1px solid var(--accent); /* Bordure subtile au survol */
+#projets { 
+  padding: 100px 10%; 
+  background: #050c1e; 
+  text-align: center;
 }
-.card h3, .card p, .card a { padding: 10px 15px;}
-.card p { color: var(--muted);}
+
+/* Grille flexible qui aligne tout automatiquement */
+.projects { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 30px; 
+  margin-top: 50px;
+}
+
+/* La carte avec une hauteur forcée pour l'alignement */
+.card { 
+  background: var(--card); 
+  padding: 0; 
+  border-radius: var(--radius); 
+  overflow: hidden; 
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column; /* Aligne le contenu verticalement */
+  height: 100%; /* Force toutes les cartes à la même hauteur */
+  text-align: left; /* Alignement du texte à gauche pour plus de pro pro */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Conteneur d'image avec position relative pour le badge */
+.card-image-container, .card picture {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.card img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 30px rgba(8, 230, 246, 0.15); 
+    border: 1px solid var(--accent); 
+}
+
+/* Contenu de la carte */
+.card-body, .card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Remplit l'espace pour pousser les boutons en bas */
+}
+
+.card h3 { 
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.card p { 
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Pousse les actions vers le bas */
+}
+
+/* --- STYLE DES BOUTONS (ACTIONS) --- */
+.project-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.project-actions a, .btn-main {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.btn-view-site, .btn-main {
+  background: var(--accent);
+  color: #050c1e;
+}
+
+.btn-view-code, .btn-sub {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-view-site:hover, .btn-view-code:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+/* --- BADGE LIVE --- */
+.status-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #28a745;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  z-index: 10;
+}
 
 /* ---- CONTACT ---- */
 #contact { padding: 100px 10%; text-align: center; background:var(--bg-sc);}
